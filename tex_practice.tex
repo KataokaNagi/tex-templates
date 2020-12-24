@@ -1,0 +1,282 @@
+% @file           tex_practice.tex
+% @brief          Practice code of LaTeX
+% @author         Kataoka Nagi
+% @date           2020-12-24 17:41:39
+% $Version:       1.0
+% $Revision:      1.0
+% @note           I will add more comments someday.
+% @attention      Use Cloud LaTeX.
+% @par            History
+%                 New file
+% Copyright (c) 2020 Kataoka Nagi
+% - This software is released under the MIT License, see LICENSE, see LICENSE.
+% - This website content is released under the CC BY 4.0 License, see LICENSE.
+
+% [uplatex]で文字化け防止
+% papersize: pdfを用紙サイズと合わせる 
+% article report book  reportはレポートというより長い報告書
+% [titlepage]: タイトルで1ページ取る
+\documentclass[a4paper,12pt,papersize,twocolumn,titlepage]{jsarticle}
+
+% プリアンブル：\documentclass～\document
+
+% Cloud LaTeX で弄るとエラーになる？
+% {otf}で文字化け防止
+% {newpxtext} でフォントがPalainoとHelveticaに
+% [utf8]
+\usepackage[dvipdfmx]{graphicx}
+
+\title{レポートタイトル　\\ 長いタイトルは＼＼で改行}
+
+%ページ番号無効
+\pagestyle{empty}
+
+\author{学生番号AL18036 片岡凪 \and ＼andで2人目 \thanks{＼thanks芝浦大 で著者脚注へ（著者の間に＼＼でも可）}}
+
+\date{\today}
+
+\begin{document}
+
+% \title の後に記述
+\maketitle 
+
+% 目次
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\begin{abstract}
+＼maketatile の後に＼begin{abstract}＼end{abstract}で概要が載る
+\end{abstract}
+
+
+\section{Cloud LaTeXへようこそ}
+
+Cloud LaTeXは，\LaTeX を使った文書の作成・管理をクラウド上で行えるWebサービスです．
+\LaTeX を使うと，複雑な数式
+\begin{equation}
+  \frac{\pi}{2} =
+  \left( \int_{0}^{\infty} \frac{\sin x}{\sqrt{x}} dx \right)^2 =
+  \sum_{k=0}^{\infty} \frac{(2k)!}{2^{2k}(k!)^2} \frac{1}{2k+1} =
+  \prod_{k=1}^{\infty} \frac{4k^2}{4k^2 - 1}
+\end{equation}
+を含んだ読みやすくきれいな文書作成ができます．
+
+\newpage
+
+本サービスは，\LaTeX 文書をリアルタイムに保存・コンパイルし，ユーザーアカウント別に管理します．
+そのため，本サービスにログインするだけで，どこからでも作業を再開でき，ファイルを持ち歩く必要はありません．
+また，様々な \LaTeX テンプレートが用意されているので，手軽に文書を作り始めることができます．
+
+\begin{figure}
+ \centering
+   \includegraphics[width=30mm]{figures/Sample.png}
+ \caption{ここにキャプションを挿入します}
+ \label{fig:model}
+\end{figure}
+
+\noindent
+Cloud LaTeXでは，作成されるPDFそのままのレイアウトで表示するPDFビューモードがあり，コンパイル画面を確認しながら文書を作成することができます（図\ref{fig:model}）
+日本語では，pLaTeX / LuaLaTeX / upLaTeX でのコンパイルが可能です．
+また，日本語や英語文書作成だけでなく，中国語・ハングルに対応した XeLaTeX のコンパイルも可能です．
+ぜひ使ってみてください．
+
+\part{部見出し}
+% \chapter{章見出し} % jsarticleなどにはない
+\section*{section*: セクションから数字を削除}
+\subsection{サブセクション}
+\subsubsection{サブサブセクション}
+\paragraph{段落見出し}
+\subparagraph{サブ段落見出し}
+\begin{quotation}
+引用
+\end{quotation}
+
+\begin{verbatim}
+＼begin{verbatim}
+＼end{verbatim}
+で記号を文字通りに出力:-)
+\end{verbatim}
+
+・数文字程度なら＼verb｜｜で可能　\verb|^^;|
+
+｜でなくてもよい　\verb">w<" \verb->w<-
+
+＼verb*｜｜でスペースが\verb*" "になる
+
+
+・英字での改行は空白になる
+
+like
+
+this
+
+↓
+
+like
+this
+
+
+・％で改行無視
+
+like%
+this
+
+
+・＼\verb*" "で\ \ \ \ 連続空白
+
+
+・～で改行なし空白（~~~~~~~~）
+
+
+・\$ などは＼\$
+
+
+・アクセント文字\^{a}などは\verb"\^{a}"
+
+
+・区切り---は\verb"---"
+
+
+・\verb"\textgt{}"\textgt{でゴシック体になる}
+・\verb"\textit{}"\textit{でイタリック体になる（はず）}
+
+・\verb*"{\Large }" で{\Large 大きな}文字など
+
+
+・\verb"\begin{}\end{} を環境という"
+
+
+・\verb"\begin{flushleft}左寄せ\end{flushleft}"
+
+\begin{flushleft}
+左寄せ
+\end{flushleft}
+
+
+・\verb"\begin{center}中央寄せ\end{center}"
+
+\begin{center}
+中央寄せ
+\end{center}
+
+
+\begin{verbatim}
+\begin{itemize}
+\item item
+\end{itemize}
+\end{verbatim}
+で
+
+\begin{itemize}
+\item 箇条書き
+%\begin{itemize}
+%\item item
+%\end{itemize}
+\end{itemize}
+
+
+\begin{verbatim}
+\begin{enumerate}
+\item item
+\end{enumerate}
+\end{verbatim}
+で
+
+\begin{enumerate}
+\item 番号付き箇条書き
+\end{enumerate}
+
+
+・\verb"/footnote{脚注}"
+\footnote{脚注}
+
+
+・\verb"\marginpar{欄外}"
+\marginpar{欄外}
+
+
+・\verb"\reversemarginpar{反対の欄外}"{}
+%\reversemarginpar{反対の欄外}
+
+
+・\verb"\underline{}" で\underline{アンダーライン} 
+
+
+・\verb"\hrulefill"
+
+\hrulefill
+
+
+・\verb"\dotfill"
+
+\dotfill
+
+
+・\verb"\fbox{fbox}"
+で
+\fbox{fbox}
+
+
+・\verb"\framebox[2cm]{fbox}"
+で
+\framebox[2cm]{fbox}
+
+
+・
+\begin{verbatim}
+\begin{equation}
+E=mc^2 \label{emc}
+\end{equation}
+\end{verbatim}
+で
+\begin{equation}
+E=mc^2 \label{emc}
+\end{equation}
+
+・\verb"\sum_{k=0}^1" で
+$\sum_{k=0}^1$
+
+
+・\verb"式\ref{emc}によると"
+＝式\ref{emc}によると
+
+・文章中で使うなら\verb"$\displaystyle \sum_{k=0}^1$" 
+ほげ $\displaystyle \sum_{k=0}^1$ ふが
+
+・\verb"$\bigl((a+b)+c\bigr)+d$"で
+
+$\bigl((a+b)+c\bigr)+d$
+
+・\verb""
+
+
+・\verb"\frac{b}{a}" で
+$\frac{b}{a}$
+
+
+\begin{verbatim}
+\usepackage{amsmath, amssymb}
+\usepackage{type1cm}
+\mathbb{N, Z, Q, R, C}
+\end{verbatim}
+
+\begin{verbatim}
+
+\end{verbatim}
+
+
+・奥村~\cite[181--204ページ]{latex2e,statistics}によると、\verb"~\cite[181--204ページ]{latex2e,statistics}"で参考文献を表示できる。
+% \usepackage{cite}　で連続参照で1-3となる
+\begin{thebibliography}{99}
+\bibitem{latex2e}
+奥村晴彦, 黒木裕介『LATEX2ε美文書作成入門』
+（技術評論社, 2017）
+\bibitem{statistics}
+石綿元（2019）「統計学(確率と統計２)講義(確率と統計第3・確率と統計第４)＜2019年度＞」,
+\begin{verbatim}
+<https://lecture.neocities.org/> 2020年1月17日アクセス.
+\end{verbatim}
+\end{thebibliography}{99}
+
+
+\end{document}
