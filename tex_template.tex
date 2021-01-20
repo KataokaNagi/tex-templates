@@ -12,6 +12,7 @@
 % - This software is released under the MIT License, see LICENSE, see LICENSE.
 % - This website content is released under the CC BY 4.0 License, see LICENSE.
 
+
 \documentclass[a4paper, papersize]{jsarticle}
 % [titlepage] でタイトルのみのページになる
 
@@ -75,8 +76,8 @@
 【授業名】 第【01など】回 レポート課題 \\
 【サブタイトル】}
 \author{AL18036 片岡 凪 \thanks{芝浦工業大学 工学部 情報工学科 3年}}
-\date{提出締切　2020年12月23日 \\
-提出日　　2020年12月18日}
+\date{提出締切　2021年0月日 \\
+提出日　　2021年0月日}
 
 \begin{document}
 
@@ -98,7 +99,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{multicols}{2}
-\setcounter{section}{-1}
+% \setcounter{section}{-1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -191,6 +192,23 @@
 \begin{lstlisting}[caption = 【ファイル名】 \quad 【ファイル名】, label = 【参照名】]
 \end{lstlisting}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+ \centering
+ \caption{直感による順序付けとコサイン類似度による順序付けのまとめ}
+ \label{order_table}
+  \begin{tabular}{l||ccc}
+  	\hline
+   名詞 & 直感 & コサイン類似度 & 順位の差 \\ \hline
+   海賊 & 1位 & 1位 & 0 \\ \hline
+   戦い & 2位 & 4位 & -2 \\ \hline
+   秘宝 & 3位 & 3位 & 0 \\ \hline
+   冒険 & 4位 & 2位 & 2 \\ \hline
+   能力 & 5位 & 5位 & 0 \\ \hline
+  \end{tabular}
+\end{table}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{手続き}
@@ -228,13 +246,48 @@
 
 \renewcommand{\figurename}{図}
 \setcounter{figure}{2}
-\begin{figure}[h]
+\begin{figure}[H]
  \centering
-   \includegraphics[width=65mm]{figures/Sample.jpg}
+   \includegraphics[width=65mm]{figures/Sample.png}
  \caption{【キャプション名】}
  \label{【ラベル名】}
 \end{figure}
 \noindent
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[htpb]
+  \centering
+    \begin{tabular}{c}
+ 
+%-----left chart-----
+ 
+      \begin{minipage}{0.47\hsize}
+        \centering
+          \includegraphics[keepaspectratio, height=40mm]
+                          {figures/Sample.png}
+                          \label{foo}
+      \end{minipage}
+ 
+%--- 中央スペース
+ 
+      \begin{minipage}{0.06\hsize}
+        \hspace{2mm}
+      \end{minipage}
+ 
+%-----right chart-----
+ 
+      \begin{minipage}{0.47\hsize}
+        \centering
+          \includegraphics[keepaspectratio, height=40mm]
+                          {figures/Sample.png}
+                          \label{bar}
+      \end{minipage} \\
+
+    \end{tabular}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -246,7 +299,7 @@
 (2019)
 「【サイトのタイトル】」，
 \verb|<| \url{【URL】} \verb|>|
-2020年01月17日アクセス．
+2021年01月17日アクセス．
 
 \bibitem{【本の参照名】}
 【人名】，【人名】
