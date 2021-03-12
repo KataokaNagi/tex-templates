@@ -2,64 +2,18 @@
 % @brief          Template code of LaTeX
 % @author         Kataoka Nagi
 % @date           2020-12-24 17:19:52
-% $Version:       1.0
-% $Revision:      1.0
-% @note           I will add more comments someday.
-% @attention      Use Cloud LaTeX.
+% $Version:       1.1
 % @par            History
-%                 New file
-% Copyright (c) 2020 Kataoka Nagi
-% - This software is released under the MIT License, see LICENSE, see LICENSE.
-% - This website content is released under the CC BY 4.0 License, see LICENSE.
+%                 separate usepackages to styles
+% Copyright (c) 2021 Kataoka Nagi
+% - This src is released under the MIT License, see LICENSE.
 
 \documentclass[a4paper, papersize]{jsarticle}
 % [titlepage] でタイトルのみのページになる
 
-\usepackage{base_katoaka-nagi}
-\usepackage{docs_katoaka-nagi}
+\usepackage{base_kataoka-nagi}
+\usepackage{docs_kataoka-nagi}
 
-\usepackage[dvipdfmx]{graphicx}
-\usepackage[]{multicol} % 途中からtwocolumun \begin{multicols}{n}
-
-% for \mathbb{}, \begin{cases}
-\usepackage{amsmath, amssymb}
-\usepackage{type1cm} 
-\usepackage{url}
-\usepackage{comment}
-\usepackage{mathtools} % for \coloneqq
-\usepackage{eqnarray} % 連続するn式
-\usepackage{here}
-
-\usepackage{listings,jlisting} % 日本語のコメントアウトをする場合jlistingが必要
-% ここからソースコードの表示に関する設定
-\lstset{
-  basicstyle={\ttfamily},
-  identifierstyle={\small},
-  commentstyle={\smallitshape},
-  keywordstyle={\small\bfseries},
-  ndkeywordstyle={\small},
-  stringstyle={\small\ttfamily},
-  frame={tb},
-  breaklines=true,
-  columns=[l]{fullflexible},
-  numbers=left,
-  xrightmargin=0zw,
-  xleftmargin=3zw,
-  numberstyle={\scriptsize},
-  stepnumber=1,
-  numbersep=1zw,
-  lineskip=-0.5ex
-}
-% ここまでソースコードの表示に関する設定
-% \begin{lstlisting}[caption=hoge,label=fuga] を用いる
-% キャプション名「ソースコードn」を「プログラムn」に変えるには，\begin{document}の前に\renewcommand{\lstlistingname}{プログラム}
-% https://qiita.com/ta_b0_/items/2619d5927492edbb5b03
-
-% for hyperref
-\usepackage[dvipdfmx, bookmarkstype=toc, colorlinks=false, pdfborder={0 0 0}, bookmarks=true, bookmarksnumbered=true]{hyperref}
-\usepackage{pxjahyper}
-
-\def\bm#1{\mbox{\boldmath $#1$}} % for bm (vector)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

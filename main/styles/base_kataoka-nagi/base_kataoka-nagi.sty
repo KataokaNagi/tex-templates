@@ -1,0 +1,49 @@
+% @file           base_kataoka-nagi.sty
+% @brief          Template base style of LaTeX files
+% @note           Move this file to tex file directory
+%                 or move to C:\texlive\texmf-local\tex\latex\local with same name folder and type mktexlsr in cmd
+% @author         Kataoka Nagi
+% @date           2021-03-12 17:23:52
+% $Version:       1.0
+% @par            History
+%                 New file
+% Copyright (c) 2021 Kataoka Nagi
+% - This src is released under the MIT License, see LICENSE.
+
+\usepackage{type1cm} % \fontsize{}, \selectfont
+\usepackage{url} % \url{}
+\usepackage{comment} % \begin{comment}
+\usepackage{here} % fix figure pos by \begin{figure}[h]
+
+% math
+\usepackage{amsmath, amssymb} % \mathbb{}, \begin{cases}
+\usepackage{mathtools} % := by \coloneqq
+\usepackage{eqnarray} % arrayed equations
+
+% src comment including japanese by \begin{lstlisting}[]
+% @see https://qiita.com/ta_b0_/items/2619d5927492edbb5b03
+\usepackage{listings,jlisting}
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
+
+% hyperref
+\usepackage[dvipdfmx, bookmarkstype=toc, colorlinks=false, pdfborder={0 0 0}, bookmarks=true, bookmarksnumbered=true]{hyperref}
+\usepackage{pxjahyper}
+
+% \def\bm#1{\mbox{\boldmath $#1$}} % bm (vector) for cloud latex
