@@ -107,7 +107,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-本稿では，デジクリ アドベントカレンダー2020 24日目\footnote{\url{https://core.digicre.net/blog/event/2/}} で紹介した，LaTeXの書き方の基本と応用について記述する．
+  本稿では，デジクリ アドベントカレンダー2020 24日目\footnote{\url{https://core.digicre.net/blog/event/2/}} で紹介した，LaTeXの書き方の基本と応用について記述する．
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -122,8 +122,8 @@
 % 1章1節
 \subsection{機能の呼び出し方}
 \begin{itemize}
-\item \verb|\機能名|
-\item \verb|\begin{機能名}[オプション]文章\end{機能名}|
+  \item \verb|\機能名|
+  \item \verb|\begin{機能名}[オプション]文章\end{機能名}|
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -131,34 +131,34 @@
 % 1章2節
 \subsection{ソースファイルの大まかな構造}
 \begin{itemize}
-\item \verb|設定と本文と，それぞれの詳細|
+  \item \verb|設定と本文と，それぞれの詳細|
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{改行の仕方}
 \begin{itemize}
-\item \verb|空行|
-\item \verb|\\|
-\item \verb|\noindent|
+  \item \verb|空行|
+  \item \verb|\\|
+  \item \verb|\noindent|
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{数式の出力}
 \begin{itemize}
-\item 文章中で$e^{i \theta} = cos{\theta} + i sin{\theta}$
-\item 別行立てで
+  \item 文章中で$e^{i \theta} = cos{\theta} + i sin{\theta}$
+  \item 別行立てで
 \end{itemize}
 \begin{align}
   e^{i \theta}
-  &= \cdots
-  &
+   & = \cdots
+   &
   \notag
   \\
-  &= 
+   & =
   cos{\theta} + i sin{\theta}
-  &
+   &
   (答)
   \label{euler}
 \end{align}
@@ -167,9 +167,9 @@
 
 \subsection{特殊文字の出力}
 \begin{itemize}
-\item 数式モードで使えるギリシャ文字など
-\item \%や\&など
-\item \verb|困ったら\verb|
+  \item 数式モードで使えるギリシャ文字など
+  \item \%や\&など
+  \item \verb|困ったら\verb|
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -179,151 +179,151 @@
 \newpage
 \begin{multicols}{2}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% 2章
-\section{LaTeXの応用}
+  % 2章
+  \section{LaTeXの応用}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{2段組み}
-このページから始まったような2段組み
+  \subsection{2段組み}
+  このページから始まったような2段組み
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{脚注}
-前ページの下部にあるような脚注
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{脚注}
+  前ページの下部にあるような脚注
 
-\subsection{出力されないメモを書き残す}
-\begin{itemize}
-\item \%の利用
-\item \verb|\begin{comment}\end{comment}|
-\end{itemize}
+  \subsection{出力されないメモを書き残す}
+  \begin{itemize}
+    \item \%の利用
+    \item \verb|\begin{comment}\end{comment}|
+  \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{項目の列挙}
-\begin{description}
-\item [手法1.] アン
-\item [手法2.] ドゥー
-\item [手法3.] トロワ
-\end{description}
+  \subsection{項目の列挙}
+  \begin{description}
+    \item [手法1.] アン
+    \item [手法2.] ドゥー
+    \item [手法3.] トロワ
+  \end{description}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{図の挿入}
-\renewcommand{\figurename}{図}
-\setcounter{figure}{2}
-\begin{figure}[H]
- \centering
-   \includegraphics[width=20mm]{figures/Sample.jpg}
- \caption{わたし}
- \label{me}
-\end{figure}
-\noindent
+  \subsection{図の挿入}
+  \renewcommand{\figurename}{図}
+  \setcounter{figure}{2}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=20mm]{figures/Sample.jpg}
+    \caption{わたし}
+    \label{me}
+  \end{figure}
+  \noindent
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{表の挿入}
+  \subsection{表の挿入}
 
-\begin{table}[H]
- \centering
- \caption{直感による順序付けとコサイン類似度による順序付けのまとめ}
- \label{order_table}
-  \begin{tabular}{l||ccc}
-  	\hline
-   名詞 & 直感 & コサイン類似度 & 順位の差 \\ \hline
-   海賊 & 1位 & 1位 & 0 \\ \hline
-   戦い & 2位 & 4位 & -2 \\ \hline
-   秘宝 & 3位 & 3位 & 0 \\ \hline
-   冒険 & 4位 & 2位 & 2 \\ \hline
-   能力 & 5位 & 5位 & 0 \\ \hline
-  \end{tabular}
-\end{table}
+  \begin{table}[H]
+    \centering
+    \caption{直感による順序付けとコサイン類似度による順序付けのまとめ}
+    \label{order_table}
+    \begin{tabular}{l||ccc}
+      \hline
+      名詞 & 直感 & コサイン類似度 & 順位の差 \\ \hline
+      海賊 & 1位  & 1位            & 0        \\ \hline
+      戦い & 2位  & 4位            & -2       \\ \hline
+      秘宝 & 3位  & 3位            & 0        \\ \hline
+      冒険 & 4位  & 2位            & 2        \\ \hline
+      能力 & 5位  & 5位            & 0        \\ \hline
+    \end{tabular}
+  \end{table}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{ソースコードの美しい挿入}
+  \subsection{ソースコードの美しい挿入}
 
-\setcounter{lstlisting}{1}
-\renewcommand{\lstlistingname}{ソースコード}
-\begin{lstlisting}[caption = hello\_world.c, label = hello]
+  \setcounter{lstlisting}{1}
+  \renewcommand{\lstlistingname}{ソースコード}
+  \begin{lstlisting}[caption = hello\_world.c, label = hello]
 int main(void) {
 　printf("Hello World!");
 }
 \end{lstlisting}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{目次やURLにハイパーリンクを張る}
-\begin{itemize}
-\item \verb|目次をクリックするとその場所に飛ぶ|
-\item \verb|URLをクリックするとそのサイトが開く|
-\item \verb|URLを記述する際の注意|
-\end{itemize}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{式や図表，参考文献の引用を示す}
-式~(\ref{euler})，図~\ref{me}，表~\ref{order_table}，ソースコード~\ref{hello}，参考文献~\cite{github}\cite{【本の参照名】}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{加減乗除}
-$+,~ -,~ \cdot,~ \times,~ \div,~ \frac{1}{2},~ \frac{dy}{dx}$
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{下付き文字・上付き文字}
-$\displaystyle a_n,~e^{i\theta},~\sum_{k=0}^{n}~,~\int_{-\infty}^{\infty}$
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{ベクトル}
-$\vec{v}, \bm{v}$
-
-\subsection{行列とその応用}
-\[
-A
-=
-\left(
-\begin{array}{cc}
-a & b \\
-c & d
-\end{array}
-\right)
-=
-\left\{
-\begin{array}{cl}
-B & \text{if} ~~ a > 0 \\
-C & \text{else}
-\end{array}
-\right.
-\]
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 2.6 参考文献
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{目次やURLにハイパーリンクを張る}
+  \begin{itemize}
+    \item \verb|目次をクリックするとその場所に飛ぶ|
+    \item \verb|URLをクリックするとそのサイトが開く|
+    \item \verb|URLを記述する際の注意|
+  \end{itemize}
 
 
-\begin{thebibliography}{99}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% urlに日本語が混ざっている場合，URL内の % を \% とする必要があるので注意
-\bibitem{github}
-片岡凪（2020）
-「この文書のソースコード置き場」
-\verb|<| \url{https://github.com/KataokaNagi/tex-templates} \verb|>|
-2020年12月24日アクセス．
+  \subsection{式や図表，参考文献の引用を示す}
+  式~(\ref{euler})，図~\ref{me}，表~\ref{order_table}，ソースコード~\ref{hello}，参考文献~\cite{github}\cite{【本の参照名】}
 
-\bibitem{【本の参照名】}
-【人名】，【人名】
-『【本のタイトル】』
-(【出版社】
-，2017)
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 2.7 参考文献，2コラム構成，本文の終了地点を設定
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \subsection{加減乗除}
+  $+,~ -,~ \cdot,~ \times,~ \div,~ \frac{1}{2},~ \frac{dy}{dx}$
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{thebibliography}
+  \subsection{下付き文字・上付き文字}
+  $\displaystyle a_n,~e^{i\theta},~\sum_{k=0}^{n}~,~\int_{-\infty}^{\infty}$
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \subsection{ベクトル}
+  $\vec{v}, \bm{v}$
+
+  \subsection{行列とその応用}
+  \[
+    A
+    =
+    \left(
+    \begin{array}{cc}
+        a & b \\
+        c & d
+      \end{array}
+    \right)
+    =
+    \left\{
+    \begin{array}{cl}
+      B & \text{if} ~~ a > 0 \\
+      C & \text{else}
+    \end{array}
+    \right.
+  \]
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  % 2.6 参考文献
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+  \begin{thebibliography}{99}
+
+    % urlに日本語が混ざっている場合，URL内の % を \% とする必要があるので注意
+    \bibitem{github}
+    片岡凪（2020）
+    「この文書のソースコード置き場」
+    \verb|<| \url{https://github.com/KataokaNagi/tex-templates} \verb|>|
+    2020年12月24日アクセス．
+
+    \bibitem{【本の参照名】}
+    【人名】，【人名】
+    『【本のタイトル】』
+    (【出版社】
+    ，2017)
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % 2.7 参考文献，2コラム構成，本文の終了地点を設定
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \end{thebibliography}
 \end{multicols}
 \end{document}

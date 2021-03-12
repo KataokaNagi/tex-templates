@@ -38,14 +38,14 @@
 \begin{document}
 
 % \title の後に記述
-\maketitle 
+\maketitle
 
 % 目次
 \setcounter{tocdepth}{2}
 \tableofcontents
 
 \begin{abstract}
-＼maketatile の後に＼begin{abstract}＼end{abstract}で概要が載る
+  ＼maketatile の後に＼begin{abstract}＼end{abstract}で概要が載る
 \end{abstract}
 
 
@@ -68,10 +68,10 @@ Cloud LaTeXは，\LaTeX を使った文書の作成・管理をクラウド上�
 また，様々な \LaTeX テンプレートが用意されているので，手軽に文書を作り始めることができます．
 
 \begin{figure}
- \centering
-   \includegraphics[width=30mm]{figures/Sample.png}
- \caption{ここにキャプションを挿入します}
- \label{fig:model}
+  \centering
+  \includegraphics[width=30mm]{figures/Sample.png}
+  \caption{ここにキャプションを挿入します}
+  \label{fig:model}
 \end{figure}
 
 \noindent
@@ -88,7 +88,7 @@ Cloud LaTeXでは，作成されるPDFそのままのレイアウトで表示す
 \paragraph{段落見出し}
 \subparagraph{サブ段落見出し}
 \begin{quotation}
-引用
+  引用
 \end{quotation}
 
 \begin{verbatim}
@@ -149,14 +149,14 @@ this
 ・\verb"\begin{flushleft}左寄せ\end{flushleft}"
 
 \begin{flushleft}
-左寄せ
+  左寄せ
 \end{flushleft}
 
 
 ・\verb"\begin{center}中央寄せ\end{center}"
 
 \begin{center}
-中央寄せ
+  中央寄せ
 \end{center}
 
 
@@ -168,10 +168,10 @@ this
 で
 
 \begin{itemize}
-\item 箇条書き
-%\begin{itemize}
-%\item item
-%\end{itemize}
+  \item 箇条書き
+        %\begin{itemize}
+        %\item item
+        %\end{itemize}
 \end{itemize}
 
 
@@ -183,7 +183,7 @@ this
 で
 
 \begin{enumerate}
-\item 番号付き箇条書き
+  \item 番号付き箇条書き
 \end{enumerate}
 
 
@@ -199,7 +199,7 @@ this
 %\reversemarginpar{反対の欄外}
 
 
-・\verb"\underline{}" で\underline{アンダーライン} 
+・\verb"\underline{}" で\underline{アンダーライン}
 
 
 ・\verb"\hrulefill"
@@ -230,7 +230,7 @@ E=mc^2 \label{emc}
 \end{verbatim}
 で
 \begin{equation}
-E=mc^2 \label{emc}
+  E=mc^2 \label{emc}
 \end{equation}
 
 ・\verb"\sum_{k=0}^1" で
@@ -240,7 +240,7 @@ $\sum_{k=0}^1$
 ・\verb"式\ref{emc}によると"
 ＝式\ref{emc}によると
 
-・文章中で使うなら\verb"$\displaystyle \sum_{k=0}^1$" 
+・文章中で使うなら\verb"$\displaystyle \sum_{k=0}^1$"
 ほげ $\displaystyle \sum_{k=0}^1$ ふが
 
 ・\verb"$\bigl((a+b)+c\bigr)+d$"で
@@ -268,12 +268,12 @@ $\frac{b}{a}$
 ・奥村~\cite[181--204ページ]{latex2e,statistics}によると、\verb"~\cite[181--204ページ]{latex2e,statistics}"で参考文献を表示できる。
 % \usepackage{cite}　で連続参照で1-3となる
 \begin{thebibliography}{99}
-\bibitem{latex2e}
-奥村晴彦, 黒木裕介『LATEX2ε美文書作成入門』
-（技術評論社, 2017）
-\bibitem{statistics}
-石綿元（2019）「統計学(確率と統計２)講義(確率と統計第3・確率と統計第４)＜2019年度＞」,
-\begin{verbatim}
+  \bibitem{latex2e}
+  奥村晴彦, 黒木裕介『LATEX2ε美文書作成入門』
+  （技術評論社, 2017）
+  \bibitem{statistics}
+  石綿元（2019）「統計学(確率と統計２)講義(確率と統計第3・確率と統計第４)＜2019年度＞」,
+  \begin{verbatim}
 <https://lecture.neocities.org/> 2020年1月17日アクセス.
 \end{verbatim}
 \end{thebibliography}{99}
