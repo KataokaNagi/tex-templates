@@ -1,0 +1,40 @@
+\documentclass[dvipdfmx,20pt]{beamer}
+
+\usepackage{bxdpx-beamer} % vdipdfmx for beamer
+\usepackage{pxjahyper} % japanase bookmark
+\usepackage{minijs} % mini jsarticle 
+% \usepackage{otf} % for Mac
+
+\renewcommand{\kanjifamilydefault}{\gtdefault} % Japanese Gothic
+
+\usetheme{AnnArbor} % theme name
+\setbeamertemplate{navigation symbols} % delete navigation symbols
+
+\title{title}
+\author{author}
+\institute[TUG]{\url{al18036@shibaura-it.ac.jp}}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \frametitle{}
+  \titlepage
+\end{frame}
+
+\section*{目次}
+\begin{frame}
+  \frametitle{発表の流れ}
+  \tableofcontents
+\end{frame}
+
+\section{はじめに}
+\subsection{ブロック環境の例}
+\begin{frame}
+  \frametitle{数式の例}
+  \[
+    e^{i\theta} = -1
+  \]
+\end{frame}
+
+\end{document}
