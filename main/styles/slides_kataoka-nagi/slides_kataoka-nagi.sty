@@ -43,10 +43,19 @@
 %スライド番号のみ表示
 %\setbeamertemplate{footline}[frame number]
 %itemize
-\setbeamertemplate{itemize item}{\small\raise0.5pt\hbox{$\bullet$}}
-\setbeamertemplate{itemize subitem}{\tiny\raise1.5pt\hbox{$\blacktriangleright$}}
-\setbeamertemplate{itemize subsubitem}{\tiny\raise1.5pt\hbox{$\bigstar$}}
+\setbeamertemplate{itemize item}{\tiny\raise4pt\hbox{$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\tiny\raise3pt\hbox{$-$}}
+\setbeamertemplate{itemize subsubitem}{\tiny\raise3pt\hbox{※}}
 % color
-\newcommand{\red}[1]{\textcolor{red}{#1}}
-\newcommand{\green}[1]{\textcolor{green!40!black}{#1}}
-\newcommand{\blue}[1]{\textcolor{blue!80!black}{#1}}
+\newcommand{\red}[1]{\textcolor{RoyalBlue}{#1}}
+\newcommand{\green}[1]{\textcolor{Crimson}{#1}}
+\newcommand{\blue}[1]{\textcolor{MediumSeaGreen}{#1}}
+
+% font color
+\definecolor{MyGrayFont}{rgb}{0.2,0.2,0.2}
+\setbeamercolor{normal text}{fg=MyGrayFont, bg=WhiteSmoke}
+
+% block color
+\setbeamercolor{structure}{fg=RoyalBlue}
+\setbeamercolor{alerted text}{fg=Crimson}
+\setbeamercolor{example text}{fg=MediumSeaGreen}

@@ -10,15 +10,20 @@
 %
 %
 % \documentclass[dvipdfmx, 11pt]{beamer}^
-\documentclass[aspectratio=169, dvipdfmx, 24pt, xcolor={svgnames,dvipsnames}]{beamer} % aspectratio=43, 149, 169
+% aspectratio = 43, 149, 169
+% font size = 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt
+\documentclass[aspectratio=169, dvipdfmx, 17pt, xcolor={svgnames,dvipsnames}]{beamer}
 
-\usepackage{base_kataoka-nagi}
-\usepackage{slides_kataoka-nagi}
+% \usepackage{base_kataoka-nagi}
+% \usepackage{slides_kataoka-nagi}
+\usepackage{../styles/base_kataoka-nagi/base_kataoka-nagi} % debug
+\usepackage{../styles/slides_kataoka-nagi/slides_kataoka-nagi} % debug
 
 \title[Short title]{タイトル}
 \subtitle{副題}
-\author[著者略称]{氏名}
-\institute[所属略称]{所属}
+\author[Kataoka Nagi]{AL18036 片岡 凪}
+% \institute[SIT]{芝浦工業大学 工学部 情報工学科 4年}
+\institute[AL18036]{芝浦工業大学 工学部 情報工学科 4年}
 \date{\today}
 
 \begin{document}
@@ -53,6 +58,7 @@
 \end{frame}
 
 \section{Section 2}
+\subsection{Subsection 1}
 \begin{frame}{目次}
   \tableofcontents[currentsection]
 \end{frame}
