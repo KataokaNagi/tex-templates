@@ -1,5 +1,8 @@
 # tex-templates
 
+## Beamer (slides)
+![image](https://user-images.githubusercontent.com/45355440/111052733-ec5bb900-84a0-11eb-81e7-e3df50938559.png)  
+
 ## tex-template
 The template for my university assignments
 
