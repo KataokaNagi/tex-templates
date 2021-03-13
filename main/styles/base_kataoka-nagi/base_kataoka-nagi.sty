@@ -10,15 +10,26 @@
 % Copyright (c) 2021 Kataoka Nagi
 % - This src is released under the MIT License, see LICENSE.
 
+% description
 \usepackage{type1cm} % \fontsize{}, \selectfont
 \usepackage{url} % \url{}
 \usepackage{comment} % ** cannot be indented ** \begin{comment}
 \usepackage{here} % fix figure pos by \begin{figure}[h]
+\usepackage{ascmac} % \begin{screen, itembox, shadebox}
+\usepackage{tcolorbox} % gray box \begin{tcolorbox}
+\usepackage{bxdpx-beamer} % vdipdfmx for beamer
 
 % math
-\usepackage{amsmath, amssymb} % \mathbb{}, \begin{cases}
+\usepackage{amsmath, amssymb} % \mathbb{} \begin{cases}
 \usepackage{mathtools} % := by \coloneqq
 \usepackage{eqnarray} % arrayed equations
+\usepackage{bm} % vector
+\usepackage{latexsym} % \Box \square
+% \def\bm#1{\mbox{\boldmath $#1$}} % bm for cloud latex
+
+% hyperref
+\usepackage[dvipdfmx, bookmarkstype=toc, colorlinks=false, pdfborder={0 0 0}, bookmarks=true, bookmarksnumbered=true]{hyperref}
+\usepackage{pxjahyper}
 
 % src comment including japanese by \begin{lstlisting}[]
 % @see https://qiita.com/ta_b0_/items/2619d5927492edbb5b03
@@ -41,9 +52,3 @@
   numbersep=1zw,
   lineskip=-0.5ex
 }
-
-% hyperref
-\usepackage[dvipdfmx, bookmarkstype=toc, colorlinks=false, pdfborder={0 0 0}, bookmarks=true, bookmarksnumbered=true]{hyperref}
-\usepackage{pxjahyper}
-
-% \def\bm#1{\mbox{\boldmath $#1$}} % bm (vector) for cloud latex

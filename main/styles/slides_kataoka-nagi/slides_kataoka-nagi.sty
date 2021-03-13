@@ -1,8 +1,15 @@
+% @file           slides_kataoka-nagi.sty
+% @brief          Template style of LaTeX document
+% @note           Move this file to tex file directory
+%                 or move to C:\texlive\texmf-local\tex\latex\local with same name folder and type mktexlsr in terminal
+% @author         Kataoka Nagi
+% @date           2021-03-14 02:39:18
+% $Version:       1.0
+% @par            History
+%                 New file
 % @see 『LaTeXテンプレート: Beamerスライド, Beamerポスター, 文書』 https://qiita.com/birdwatcher/items/5dd8a5f453bdc0c6940e
-
-% \documentclass[dvipdfmx, 11pt]{beamer}
-\documentclass[aspectratio=169, dvipdfmx, 11pt]{beamer} % aspectratio=43, 149, 169
-\usepackage{here, amsmath, latexsym, amssymb, bm, ascmac, mathtools, multicol, tcolorbox, subfig}
+% Copyright (c) 2021 Kataoka Nagi
+% - This src is released under the MIT License, see LICENSE.
 
 %デザインの選択(省略可)
 \usetheme{Luebeck}
@@ -39,70 +46,3 @@
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 \newcommand{\green}[1]{\textcolor{green!40!black}{#1}}
 \newcommand{\blue}[1]{\textcolor{blue!80!black}{#1}}
-
-\title[Short title]{タイトル}
-\subtitle{副題}
-\author[著者略称]{氏名}
-\institute[所属略称]{所属}
-\date{\today}
-
-\begin{document}
-\maketitle
-
-\begin{frame}{目次}
-    \tableofcontents
-\end{frame}
-
-\section{Section 1}
-\begin{frame}{目次}
-    \tableofcontents[currentsection]
-\end{frame}
-
-\begin{frame}{ブロック環境}
-    \begin{block}{block}
-    block
-    \end{block}
-    \begin{alertblock}{alertblock}
-    alertblock
-    \end{alertblock}
-    \begin{exampleblock}{exampleblock}
-    exampleblock
-    \end{exampleblock}
-    \begin{tcolorbox}[colframe=green,
-    colback=green!10!white,
-    colbacktitle=green!40!white,
-    coltitle=black, fonttitle=\bfseries,
-    title=My box]
-        box contents
-    \end{tcolorbox}
-\end{frame}
-
-\section{Section 2}
-\begin{frame}{目次}
-    \tableofcontents[currentsection]
-\end{frame}
-
-\begin{frame}{箇条書き}
-    \begin{itemize}
-    \item アイテム1
-    \item \alert{アイテム2}
-        \begin{itemize}
-        \item アイテム1
-        \item \alert{アイテム2}
-            \begin{itemize}
-            \item アイテム1
-            \item \alert{アイテム2}
-            \end{itemize}
-        \end{itemize}
-    \end{itemize}
-    \[
-    \bm{x}^\top\bm{y}
-    \]
-    \begin{enumerate}
-    \item abcde
-    \item \structure{ABCDE}
-    \item 
-    \end{enumerate}
-\end{frame}
-
-\end{document}

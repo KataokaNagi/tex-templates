@@ -1,0 +1,83 @@
+% @file           beamer-template.tex
+% @brief          Template slides of beamer (LaTeX)
+% @author         Kataoka Nagi
+% @date           2021-03-14 03:14:48
+% $Version:       1.0
+% @par            History
+%                 New file
+% Copyright (c) 2021 Kataoka Nagi
+% - This src is released under the MIT License, see LICENSE.
+%
+%
+% \documentclass[dvipdfmx, 11pt]{beamer}^
+\documentclass[aspectratio=169, dvipdfmx, 24pt]{beamer} % aspectratio=43, 149, 169
+
+\usepackage{base_kataoka-nagi}
+\usepackage{slides_kataoka-nagi}
+
+\title[Short title]{タイトル}
+\subtitle{副題}
+\author[著者略称]{氏名}
+\institute[所属略称]{所属}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{frame}{目次}
+  \tableofcontents
+\end{frame}
+
+\section{Section 1}
+\begin{frame}{目次}
+  \tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{ブロック環境}
+  \begin{block}{block}
+    block
+  \end{block}
+  \begin{alertblock}{alertblock}
+    alertblock
+  \end{alertblock}
+  \begin{exampleblock}{exampleblock}
+    exampleblock
+  \end{exampleblock}
+  \begin{tcolorbox}[colframe=green,
+      colback=green!10!white,
+      colbacktitle=green!40!white,
+      coltitle=black, fonttitle=\bfseries,
+      title=My box]
+    box contents
+  \end{tcolorbox}
+\end{frame}
+
+\section{Section 2}
+\begin{frame}{目次}
+  \tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{箇条書き}
+  \begin{itemize}
+    \item アイテム1
+    \item \alert{アイテム2}
+          \begin{itemize}
+            \item アイテム1
+            \item \alert{アイテム2}
+                  \begin{itemize}
+                    \item アイテム1
+                    \item \alert{アイテム2}
+                  \end{itemize}
+          \end{itemize}
+  \end{itemize}
+  \[
+    \bm{x}^\top\bm{y}
+  \]
+  \begin{enumerate}
+    \item abcde
+    \item \structure{ABCDE}
+    \item
+  \end{enumerate}
+\end{frame}
+
+\end{document}
