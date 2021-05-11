@@ -14,6 +14,8 @@
 \usepackage{bxdpx-beamer} % vdipdfmx for beamer
 \usepackage{pxjahyper} % japanase bookmark
 \usepackage{minijs} % mini jsarticle 
+\usepackage{textcomp} % add fonts
+\usepackage{pifont} % add fonts
 
 %デザインの選択(省略可)
 \usetheme{Luebeck}
@@ -43,9 +45,10 @@
 %スライド番号のみ表示
 %\setbeamertemplate{footline}[frame number]
 %itemize
-\setbeamertemplate{itemize item}{\tiny\raise4pt\hbox{$\blacktriangleright$}}
-\setbeamertemplate{itemize subitem}{\tiny\raise3pt\hbox{$-$}}
-\setbeamertemplate{itemize subsubitem}{\tiny\raise3pt\hbox{※}}
+\usepackage[T1]{fontenc} % @see https://tex.stackexchange.com/questions/215634/how-to-use-guilsinglleft-and-guilsinglright-in-csquotes
+\setbeamertemplate{itemize item}{\tiny\raise3pt\hbox{\ding{"6E}}}
+\setbeamertemplate{itemize subitem}{\tiny\raise3.5pt\hbox{$\blacktriangleright$}}
+\setbeamertemplate{itemize subsubitem}{\tiny\raise2pt\hbox{\textopenbullet}}
 % color
 \newcommand{\red}[1]{\textcolor{RoyalBlue}{#1}}
 \newcommand{\green}[1]{\textcolor{Crimson}{#1}}
@@ -111,3 +114,4 @@
 % escape pandoc's tightlist error
 % @see Markdownで卒業論文を書きたい https://qiita.com/mecaota/items/fa3de81ca4cb04ac852e
 \def\tightlist{\itemsep1pt\parskip0pt\parsep0pt}
+
