@@ -1,11 +1,14 @@
+%&./out/beamer-template
+% use precompiled file
+%%%%%%%%%% ↑ EDIT FILE NAME ↑ %%%%%%%%%%
 
 % @file           beamer-template.tex
 % @brief          Template slides of beamer (LaTeX)
 % @author         Kataoka Nagi
-% @date           2021-05-11 17:09:55
+% @date           2021-05-11 17:48:03
 % $Version:       1.0
 % @par            History
-%                 adjust columns pos
+%                 add precompile setting
 % Copyright (c) 2021 Kataoka Nagi
 % - This src is released under the MIT License, see LICENSE.
 
@@ -18,6 +21,9 @@
 % @see　「Beamer columns 環境で画像を配置するベストな方法」https://qiita.com/t_uda/items/8ef173eebf9827305135#3-columns-%E7%92%B0%E5%A2%83%E3%81%AE%E6%AD%A3%E3%81%97%E3%81%84%E4%BD%BF%E3%81%84%E6%96%B9
 \PassOptionsToClass{hiresbb}{graphicx}
 \documentclass[aspectratio=169, dvipdfmx, 14pt, xcolor={svgnames,dvipsnames}]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage{graphicx}
 \newcommand{\thickhrulefill}{\leavevmode\leaders\hrule depth-1.2pt height 3.2pt\hfill\kern0pt}
 \newcommand{\indicatewidth}[1]{\thickhrulefill{#1}\thickhrulefill}
@@ -26,12 +32,18 @@
 \newlength{\mycolumnwidth}
 \mycolumnwidth=\dimexpr\mytotalwidth-5mm
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % \usepackage{base_kataoka-nagi}
 % \usepackage{slides_kataoka-nagi}
 \usepackage{../styles/base_kataoka-nagi/base_kataoka-nagi} % debug
 \usepackage{../styles/slides_kataoka-nagi/slides_kataoka-nagi} % debug
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% precompile preamble from here.
+% don't precompile with glossaries-env!
+% type [eptex -ini -jobname="FILE_NAME" "&platex" mylatexformat.ltx FILE_NAME.tex] in cd
+% @see 「beamerのコンパイル速度を上げる」 http://margaret-sdpara.blogspot.com/2019/11/beamer.html
+\endofdump
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
