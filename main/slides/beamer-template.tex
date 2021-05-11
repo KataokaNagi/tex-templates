@@ -1,23 +1,39 @@
+
 % @file           beamer-template.tex
 % @brief          Template slides of beamer (LaTeX)
 % @author         Kataoka Nagi
-% @date           2021-03-14 03:14:48
+% @date           2021-05-11 17:09:55
 % $Version:       1.0
 % @par            History
-%                 New file
+%                 adjust columns pos
 % Copyright (c) 2021 Kataoka Nagi
 % - This src is released under the MIT License, see LICENSE.
-%
-%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % \documentclass[dvipdfmx, 11pt]{beamer}^
 % aspectratio = 43, 149, 169
 % font size = 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt
-\documentclass[aspectratio=169, dvipdfmx, 17pt, xcolor={svgnames,dvipsnames}]{beamer}
+% @see　「Beamer columns 環境で画像を配置するベストな方法」https://qiita.com/t_uda/items/8ef173eebf9827305135#3-columns-%E7%92%B0%E5%A2%83%E3%81%AE%E6%AD%A3%E3%81%97%E3%81%84%E4%BD%BF%E3%81%84%E6%96%B9
+\PassOptionsToClass{hiresbb}{graphicx}
+\documentclass[aspectratio=169, dvipdfmx, 14pt, xcolor={svgnames,dvipsnames}]{beamer}
+\usepackage{graphicx}
+\newcommand{\thickhrulefill}{\leavevmode\leaders\hrule depth-1.2pt height 3.2pt\hfill\kern0pt}
+\newcommand{\indicatewidth}[1]{\thickhrulefill{#1}\thickhrulefill}
+\newlength{\mytotalwidth}
+\mytotalwidth=\dimexpr\linewidth-5mm
+\newlength{\mycolumnwidth}
+\mycolumnwidth=\dimexpr\mytotalwidth-5mm
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \usepackage{base_kataoka-nagi}
 % \usepackage{slides_kataoka-nagi}
 \usepackage{../styles/base_kataoka-nagi/base_kataoka-nagi} % debug
 \usepackage{../styles/slides_kataoka-nagi/slides_kataoka-nagi} % debug
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title[Short title]{タイトル}
 \subtitle{副題}
@@ -25,18 +41,31 @@
 % \institute[SIT]{芝浦工業大学 工学部 情報工学科 4年}
 \institute[AL18036]{芝浦工業大学 工学部 情報工学科 4年}
 \date{\today}
+% \date{May 13, 2021}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{目次}
   \tableofcontents
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Section 1}
 \begin{frame}{目次}
   \tableofcontents[currentsection]
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{ブロック環境}
   \begin{block}{block}
@@ -57,11 +86,15 @@
   \end{tcolorbox}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Section 2}
 \subsection{Subsection 1}
 \begin{frame}{目次}
   \tableofcontents[currentsection]
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}{箇条書き}
   \begin{itemize}
