@@ -98,3 +98,12 @@
  {}
  {}
 \makeatother
+
+% frame title margin
+% @see Beamer+TikZによるスライド作成のTips その1 ry0u.github.io/post/2017-12-25-beamer-tikz-slide/
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.00ex,dp=0.00ex]{frametitle} % htで直接指定
+    \hspace*{1.5ex}\insertframetitle % 左margin + hspaceから始める
+  \end{beamercolorbox}
+}
