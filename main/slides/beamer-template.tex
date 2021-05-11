@@ -56,6 +56,22 @@
 % \date{May 13, 2021}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% tableofcontents
+% LATEX Beamerの使い方 http://joker.hatenablog.com/entry/2014/10/18/222303
+\AtBeginSection[]{
+    \begin{frame}{目次}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+% \AtBeginSubsection[]{
+%     \begin{frame}{目次}
+%         \tableofcontents[currentsection]
+%     \end{frame}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -66,16 +82,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{目次}
-  \tableofcontents
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Section 1}
-\begin{frame}{目次}
-  \tableofcontents[currentsection]
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -101,10 +108,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Section 2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Subsection 1}
-\begin{frame}{目次}
-  \tableofcontents[currentsection]
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
