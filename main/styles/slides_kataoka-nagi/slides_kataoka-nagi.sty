@@ -3,10 +3,10 @@
 % @note           Move this file to tex file directory
 %                 or move to C:\texlive\texmf-local\tex\latex\local with same name folder and type mktexlsr in terminal
 % @author         Kataoka Nagi
-% @date           2021-03-14 02:39:18
+% @date           2021-05-11 16:07:28
 % $Version:       1.0
 % @par            History
-%                 New file
+%                 add itemsep
 % @see 『LaTeXテンプレート: Beamerスライド, Beamerポスター, 文書』 https://qiita.com/birdwatcher/items/5dd8a5f453bdc0c6940e
 % Copyright (c) 2021 Kataoka Nagi
 % - This src is released under the MIT License, see LICENSE.
@@ -59,3 +59,42 @@
 \setbeamercolor{structure}{fg=RoyalBlue}
 \setbeamercolor{alerted text}{fg=Crimson}
 \setbeamercolor{example text}{fg=MediumSeaGreen}
+
+% item margin
+% @see "LaTeX Beamer: Define \itemsep globally" https://bepokuma.com/how-to-migrate-your-origin-version-of-apex-legends-account-data-to-the-steam-version-of-apex-legends-account-data/
+\usepackage{xpatch}
+
+\makeatletter
+\newcommand{\my@beamer@setsep}{%
+\ifnum\@itemdepth=1\relax
+     \setlength\itemsep{\my@beamer@itemsepi}% separation for first level
+     \setlength\topsep{\my@beamer@itemsepii}% separation for second level
+   \else
+     \ifnum\@itemdepth=2\relax
+       \setlength\itemsep{\my@beamer@itemsepii}% separation for second level
+       \setlength\topsep{\my@beamer@itemsepii}% separation for second level
+     \else
+       \ifnum\@itemdepth=3\relax
+         \setlength\itemsep{\my@beamer@itemsepiii}% separation for third level
+         \setlength\topsep{\my@beamer@itemsepiii}% separation for second level
+   \fi\fi\fi}
+\newlength{\my@beamer@itemsepi}\setlength{\my@beamer@itemsepi}{1.3ex}
+\newlength{\my@beamer@itemsepii}\setlength{\my@beamer@itemsepii}{1.0ex}
+\newlength{\my@beamer@itemsepiii}\setlength{\my@beamer@itemsepiii}{1.0ex}
+\newcommand\setlistsep[3]{%
+    \setlength{\my@beamer@itemsepi}{#1}%
+    \setlength{\my@beamer@itemsepii}{#2}%
+    \setlength{\my@beamer@itemsepiii}{#3}%
+}
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\my@beamer@setsep\def\makelabel}
+ {}
+ {}
+
+\xpatchcmd{\beamer@enum@}
+  {\def\makelabel}
+  {\my@beamer@setsep\def\makelabel}
+ {}
+ {}
+\makeatother
