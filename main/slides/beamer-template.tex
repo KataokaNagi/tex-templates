@@ -86,7 +86,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{ブロック環境}
+\begin{frame}{Block}
   \begin{block}{block}
     block
   \end{block}
@@ -96,6 +96,11 @@
   \begin{exampleblock}{exampleblock}
     exampleblock
   \end{exampleblock}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Block}
   \begin{tcolorbox}[colframe=green,
       colback=green!10!white,
       colbacktitle=green!40!white,
@@ -115,27 +120,73 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{箇条書き}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% @see LATEX Beamerの使い方 http://joker.hatenablog.com/entry/2014/10/18/222303
+\appendix
+
+% adjust appendix index
+% @see LaTeX Beamer インストール http://ryokbys.web.nitech.ac.jp/beamer.html
+\backupbegin
+
+\AtBeginSection[]{
+}
+\AtBeginSubsection[]{
+}
+
+\section{\appendixname}
+
+
+\frame{\tableofcontents}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Itemize}
   \begin{itemize}
-    \item アイテム1
-    \item \alert{アイテム2}
+    \item item 1
+    \item \alert{item 2}
           \begin{itemize}
-            \item アイテム1
-            \item \alert{アイテム2}
+            \item item 2.1
+            \item \alert{item 2.2}
                   \begin{itemize}
-                    \item アイテム1
-                    \item \alert{アイテム2}
+                    \item item 2.2.1
+                    \item \alert{item 2.2.2}
                   \end{itemize}
           \end{itemize}
   \end{itemize}
-  \[
-    \bm{x}^\top\bm{y}
-  \]
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Enumrate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Enumrate}
   \begin{enumerate}
-    \item abcde
-    \item \structure{ABCDE}
-    \item
+    \item enum 1
+    \item \structure{enum 2}
+          \begin{enumerate}
+            \item enum 2.1
+            \item \structure{enum 2.2}
+                  \begin{enumerate}
+                    \item enum 2.2.1
+                    \item \structure{enum 2.2.2}
+                  \end{enumerate}
+          \end{enumerate}
   \end{enumerate}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% adjust appendix index
+% add \backupbegin after \appendix, & \backupend before \end{document}
+% @see LaTeX Beamer インストール http://ryokbys.web.nitech.ac.jp/beamer.html
+\backupend
 
 \end{document}
